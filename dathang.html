@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+	      rel="stylesheet">
+	<link rel="stylesheet" href="asset/lib/bootstrap5/bootstrap.min.css">
+	<link rel="stylesheet" href="asset/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="asset/fonts/all.min.css">
+	<link rel="stylesheet" href="asset/css/base.css">
+	<link rel="stylesheet" href="asset/css/style.css">
+	<title>Đặt hàng</title>
+</head>
+<body>
+<header class="d-none">
+	<div class="container-fluid">
+		<div class="header-wrap d-flex align-items-center justify-content-between">
+			<div class="header-left">
+				<div class="row align-items-center">
+					<div class="col-xl-2">
+						<a href="#" class="header-logo">
+							<img src="asset/image/logo-clothes.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					<div class="col-xl-10">
+						<ul class="header-nav list-unstyled mb-0">
+							<li>
+								<a href="#" aria-label="">TRANG CHỦ</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">
+									DANH MỤC SẢN PHẨM
+									<span><i class="fal fa-angle-right"></i></span>
+								</a>
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#" aria-label="">Áo kiểu</a>
+									</li>
+									<li>
+										<a href="#" aria-label="">Áo croptop</a>
+									</li>
+									<li>
+										<a href="#" aria-label="">Áo sơ mi</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" aria-label="">BỘ SƯU TẬP</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">TIN TỨC</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">LIÊN HỆ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header-right d-flex align-items-center gap-2">
+				<button class="header-search header-button">
+					<i class="fal fa-search"></i>
+				</button>
+				<button class="header-user header-button" id="call-login">
+					<i class="fal fa-user"></i>
+				</button>
+				<button class="header-search header-button position-relative">
+					<i class="fal fa-heart"></i>
+					<span class="number">0</span>
+				</button>
+				<button class="header-cart header-button position-relative" id="call-cart">
+					<i class="fal fa-shopping-bag"></i>
+					<span class="number">0</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="page-cart">
+		<form class="frm-cart needs-validation" novalidate="" id="frmPayment">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="cart-from">
+							<div class="cart-from_header">
+								Thông tin đặt hàng
+								<span>
+									Đã có tài khoản?									<a href="/dang-nhap?redirect=order">
+									Đăng nhập ngay
+								</a>
+								</span>
+							</div>
+							<div class="cart-from_body">
+								<div class="row g-4">
+									<div class="col-md-6">
+										<div class="form-item">
+											<label for="frm-sdt">Số điện thoại (<span class="text-danger">*</span>)</label>
+											<input type="tel" id="frm-sdt" name="sdt" maxlength="10" minlength="10" required="" class="form-control" value="" placeholder="Số điện thoại nhận hàng...">
+											<div class="invalid-feedback">
+												Vui lòng nhập số điện thoại của bạn
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-item">
+											<label for="frm-tenkhachhang">Họ &amp; tên (<span class="text-danger">*</span>)</label>
+											<input type="text" id="frm-tenkhachhang" name="tenkhachhang" minlength="6 " required="" class="form-control" value="" placeholder="Họ &amp; tên nhận hàng...">
+											<div class="invalid-feedback">
+												Vui lòng nhập họ &amp; tên của bạn
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-item">
+											<label for="frm-diachi">Địa chỉ nhận hàng (<span class="text-danger">*</span>)</label>
+											<input type="text" id="frm-diachi" name="diachi" class="form-control" required="" value="" placeholder="Địa chỉ nhận hàng...">
+											<div class="invalid-feedback">
+												Vui lòng nhập địa chỉ nhận hàng của bạn
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-item">
+											<label for="frm-email">Email nhận hàng</label>
+											<input type="email" id="frm-email" name="email" class="form-control" value="" placeholder="Email nhận hàng...">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-item">
+											<label for="frm-note">Ghi chú khi giao hàng</label>
+											<textarea id="frm-note" name="ghichu" rows="4" class="frm-validation_textarea form-control" placeholder="Nhập ghi chú khi giao hàng..."></textarea>
+										</div>
+									</div>
+									<div class="collapse" id="collapse-register">
+										<div class="col-12">
+											<div class="row g-4">
+												<div class="col-md-4">
+													<div class="form-item">
+														<label for="frm-matkhau">Email đăng nhập</label>
+														<input type="email" id="frm-emaildangnhap" name="frm-emaildangnhap" class="form-control setRequired" placeholder="Email đăng nhập...">
+														<div class="invalid-feedback">
+															Vui lòng nhập email đăng nhập
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="form-item">
+														<label for="frm-matkhau">Mật khẩu đăng nhập</label>
+														<button type="button" class="btn-pass view-pass" data-id="frm-matkhau">
+															<i class="fas fa-eye"></i>
+														</button>
+														<input type="password" id="frm-matkhau" name="frm-matkhau" class="form-control setRequired" minlength="8" placeholder="Mật khẩu đăng nhập...">
+														<div class="invalid-feedback">
+															Vui lòng nhập mật khẩu, tối thiểu 8 kí tự
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="form-item">
+														<label for="frm-matkhau">Nhập lại mật khẩu</label>
+														<button type="button" class="btn-pass view-pass" data-id="frm-replymatkhau">
+															<i class="fas fa-eye"></i>
+														</button>
+														<input type="password" id="frm-replymatkhau" name="frm-replymatkhau" class="form-control setRequired" minlength="8" placeholder="Nhập lại mật khẩu...">
+														<div class="invalid-feedback">
+															Vui lòng nhập mật khẩu, tối thiểu 8 kí tự
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-desc d-flex flex-column-reverse flex-md-row align-items-center justify-content-between">
+											<span>
+												Vui lòng không bỏ trống các trường có dấu <b>*</b>
+											</span>
+											<label for="register-account" class="d-flex align-items-center mb-2 mb-md-0" role="button">
+												<input type="checkbox" id="register-account" name="register-account" data-bs-toggle="collapse" class="me-1 position-relative" style="top: -1px" data-bs-target="#collapse-register">
+												Tạo tài khoản sau khi đặt hàng
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart-payments">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="cart-payment_item">
+										<div class="cart-payment_title">
+											Vận chuyển
+										</div>
+										<div class="cart-payment_list">
+											<div class="cart-payment_list__item">
+												<div class="content">
+													<span class="text">Giao hàng tận nơi</span>
+													<span class="value-empty">
+														<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+															<polyline points="20 6 9 17 4 12"></polyline>
+														</svg>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="cart-payment_item">
+										<div class="cart-payment_title">
+											Hình thức thanh toán
+										</div>
+										<div class="cart-payment_list">
+											<div class="cart-payment_list__item">
+												<div class="content">
+													<span class="text">Thanh toán khi giao hàng</span>
+													<span class="value-empty">
+														<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+															<polyline points="20 6 9 17 4 12"></polyline>
+														</svg>
+													</span>
+												</div>
+												<div class="desc">
+													Bạn chỉ phải thanh toán khi nhận được hàng
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 mt-4 mt-lg-0">
+						<div class="cart-sidebar_list">
+							<div class="cart-sidebar">
+								<div class="cart-title">
+									Danh sách sản phẩm
+								</div>
+								<div class="cart-products">
+									<div class="cart-product_item">
+										<div class="cart-product_content">
+											<div class="title">
+												Pyjama tay ngắn + quần dài (phối màu hồng, tím)												<span>(SL: 1)</span>
+											</div>
+											<div class="property">
+												Size
+												:&nbsp;<b>S</b>
+											</div>
+											<div class="property">
+												Màu
+												:&nbsp;<b><span style="background-color: #ae3753;"></span></b>
+											</div>
+										</div>
+										<div class="cart-product_total">
+											455.000đ										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cart-sidebar">
+								<div class="cart-title">
+									Tổng tiền
+								</div>
+								<div class="cart-list">
+									<div class="cart-list_item">
+										Tạm tính:&nbsp;
+										<span class="value totalCheckout">455.000đ</span>
+									</div>
+									<div class="cart-list_item">
+										Tổng tiền:&nbsp;
+										<span class="value totalCheckout">455.000đ</span>
+									</div>
+								</div>
+								<div class="cart-desc">
+									Miễn phí vận chuyển
+								</div>
+								<div class="cart-button">
+									<input type="hidden" value="455000" name="total" id="total">
+									<button type="submit" id="buttonPayment" class="btn-payment button-custom">
+										Đặt hàng ngay
+									</button>
+								</div>
+								<div class="cart-link">
+									<a href="index.html" class="button-custom button-custom-outline ">
+										Tiếp tục mua hàng
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</main>
+
+
+<script src="asset/lib/jquery/jquery.min.js"></script>
+<script src="asset/lib/bootstrap5/bootstrap.bundle.min.js"></script>
+<script src="asset/lib/swiper/swiper-bundle.min.js"></script>
+<script src="asset/js/theme.js"></script>
+</body>
+</html>

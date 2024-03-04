@@ -1,0 +1,95 @@
+:root{
+    --primary-color:#cea384;
+    --primary-hover: #c9997a;
+    --secondary-color:#ffca12;
+     --base-color:#e12c43;
+
+    --transition-all: all 0.35s ease-in-out;
+    --font-family: 'Mulish', sans-serif;
+
+}
+
+
+html {
+    font-size: 100%;
+    scroll-behavior: auto !important;
+}
+
+body {
+    font: 400 14px/1.5 var(--font-family);
+}
+
+img, iframe {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+a, button, input, select, span, i {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height:1.5;
+}
+
+button {
+    outline: none;
+}
+
+a:hover {
+    color: currentColor;
+}
+
+a, button, input, textarea {
+    -webkit-transition: var(--transition-all);
+    -o-transition: var(--transition-all);
+    transition: var(--transition-all);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+input:focus{
+    outline: none;
+    box-shadow: none !important;
+    border-color:var(--bs-gray-700) !important;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+.section-gap{
+    padding: 40px 0;
+}
+main{
+    padding-top: 85px;
+}
+
+.transition{
+    transition: all 0.3s ease-in;
+}

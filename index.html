@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+	      rel="stylesheet">
+	<link rel="stylesheet" href="asset/lib/bootstrap5/bootstrap.min.css">
+	<link rel="stylesheet" href="asset/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="asset/fonts/all.min.css">
+	<link rel="stylesheet" href="asset/css/base.css">
+	<link rel="stylesheet" href="asset/css/style.css">
+	<title>Trang chủ</title>
+</head>
+<body>
+<header>
+	<div class="container-fluid">
+		<div class="header-wrap d-flex align-items-center justify-content-between">
+			<div class="header-left">
+				<div class="row align-items-center">
+					<div class="col-xl-2">
+						<a href="#" class="header-logo d-block">
+							<img src="asset/image/logo-clothes.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					<div class="col-xl-10">
+						<ul class="header-nav list-unstyled mb-0">
+							<li>
+								<a href="#" aria-label="">TRANG CHỦ</a>
+							</li>
+							<li>
+								<a href="#collapsedanhmuc" aria-label="" data-bs-toggle="collapse">
+									DANH MỤC SẢN PHẨM
+									<span><i class="fal fa-angle-right"></i></span>
+								</a>
+								<ul class="list-unstyled mb-0 collapse" id="collapsedanhmuc">
+									<li>
+										<a href="#" aria-label="">Áo kiểu</a>
+									</li>
+									<li>
+										<a href="#" aria-label="">Áo croptop</a>
+									</li>
+									<li>
+										<a href="#" aria-label="">Áo sơ mi</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" aria-label="">BỘ SƯU TẬP</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">TIN TỨC</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">LIÊN HỆ</a>
+							</li>
+						</ul>
+						<div class="bg-overplay-nav "></div>
+					</div>
+				</div>
+			</div>
+			<div class="header-right d-flex align-items-center gap-2">
+				<button class="header-search header-button" id="call-search">
+					<i class="fal fa-search transition"></i>
+				</button>
+				<button class="header-user header-button" id="call-login">
+					<i class="fal fa-user transition"></i>
+				</button>
+				<button class="header-search header-button position-relative">
+					<i class="fal fa-heart transition"></i>
+					<span class="number">0</span>
+				</button>
+				<button class="header-cart header-button position-relative" id="call-cart">
+					<i class="fal fa-shopping-bag"></i>
+					<span class="number">0</span>
+				</button>
+				<button class="header-hamburger header-button d-xl-none d-flex" id="call-header">
+					<i class="fal fa-stream transition"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!--tìm kiếm-->
+	<div class="floating-search">
+		<div class="floating-search__wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<form id="frm-search">
+							<div class="floating-search__input position-relative">
+								<input type="text" placeholder="Tìm kiếm..." class="form-input input-form"
+								       id="input-search">
+								<button type="submit" class="button-custom">
+									<i class="fal fa-search "></i>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="floating-search__result" id="result-search">
+			<div class="container">
+				<div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-2 g-lg-4 g-3">
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/1.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/2.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+								<div class="card-product__label">
+									-12%
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Áo khoác len cổ cao đơn giản - Tay dài
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-default text-decoration-line-through ">340.000đ</span>
+										<span class="price-sale">280.000đ</span>
+									</div>
+								</div>
+								<div class="card-product__properties">
+									<a href="#" class="properties-item active">
+										<span style="background-color:#b97c05;"></span>
+									</a>
+									<a href="#" class="properties-item ">
+										<span style="background-color:#e5e1e1;"></span>
+									</a>
+									<a href="#" class="properties-item">
+										<span style="background-color:black;"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/2.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/1.jpg" alt="">
+												</div>
+											</div>
+											
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Áo kiểu trễ vai tay lửng
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-sale">280.000đ</span>
+									</div>
+								</div>
+								<div class="card-product__properties">
+									<a href="#" class="properties-item active">
+										<span style="background-color:#b97c05;"></span>
+									</a>
+									<a href="#" class="properties-item">
+										<span style="background-color:black;"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/2.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/1.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Váy xếp ly
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-sale">730.000đ</span>
+									</div>
+								</div>
+								<div class="card-product__properties">
+									<a href="#" class="properties-item active">
+										<span style="background-color:#b97c05;"></span>
+									</a>
+									<a href="#" class="properties-item">
+										<span style="background-color:black;"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/4.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/2.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+								<div class="card-product__label">
+									-10%
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Áo trễ vai sọc - Tay lửng
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-default text-decoration-line-through ">930.000đ</span>
+										<span class="price-sale">870.000đ</span>
+									</div>
+								</div>
+								<div class="card-product__properties">
+									<a href="#" class="properties-item active">
+										<span style="background-color:#b97c05;"></span>
+									</a>
+									<a href="#" class="properties-item ">
+										<span style="background-color:#e5e1e1;"></span>
+									</a>
+									<a href="#" class="properties-item">
+										<span style="background-color:black;"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/5.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/2.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+								<div class="card-product__label">
+									-12%
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Áo kiểu cổ tym
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-default text-decoration-line-through ">340.000đ</span>
+										<span class="price-sale">280.000đ</span>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/7.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/2.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+								<div class="card-product__label">
+									-12%
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Váy jean dài
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-default text-decoration-line-through ">940.000đ</span>
+										<span class="price-sale">860.000đ</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/2.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/1.jpg" alt="">
+												</div>
+											</div>
+											
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Áo trễ vai sọc
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-sale">820.000đ</span>
+									</div>
+								</div>
+								<div class="card-product__properties">
+									<a href="#" class="properties-item active">
+										<span style="background-color:#b97c05;"></span>
+									</a>
+									<a href="#" class="properties-item">
+										<span style="background-color:black;"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-product card h-100 bg-white ">
+							<div class="card-product__header position-relative ">
+								<div class="card-product__image" id="swiper-image">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/5.jpg" alt="">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/1.jpg" alt="">
+												</div>
+											</div>
+											
+											<div class="swiper-slide">
+												<div class="ratio ratio-1x1">
+													<img src="/asset/image/3.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-product__actions">
+									<div class="card-action" data-hint="Thêm yêu thích">
+										<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="card-action" data-hint="Xem chi tiết">
+										<button class="d-flex align-items-center justify-content-center w-100 h-100"
+										        data-bs-toggle="modal" data-bs-target="#viewProduct">
+											<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+												      stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								
+								</div>
+							</div>
+							<div class="card-body card-product__body d-flex flex-column gap-3">
+								<div class="card-body__inner">
+									<a href="#" class="card-product__title">
+										Áo kiểu trễ vai tay lửng
+									</a>
+									<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+										<span class="price-sale">280.000đ</span>
+									</div>
+								</div>
+								<div class="card-product__properties">
+									<a href="#" class="properties-item active">
+										<span style="background-color:#b97c05;"></span>
+									</a>
+									<a href="#" class="properties-item">
+										<span style="background-color:black;"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="section-product section-gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<div class="section-heading text-center">
+						<h2 class="heading-title">SẢN PHẨM NỔI BẬT</h2>
+						<div class="heading-text">
+							Best Seller Product This Week!
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-2 g-4">
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/1.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+							<div class="card-product__label">
+								-12%
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Áo khoác len cổ cao đơn giản - Tay dài
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-default text-decoration-line-through ">340.000đ</span>
+									<span class="price-sale">280.000đ</span>
+								</div>
+							</div>
+							<div class="card-product__properties">
+								<a href="#" class="properties-item active">
+									<span style="background-color:#b97c05;"></span>
+								</a>
+								<a href="#" class="properties-item ">
+									<span style="background-color:#e5e1e1;"></span>
+								</a>
+								<a href="#" class="properties-item">
+									<span style="background-color:black;"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/1.jpg" alt="">
+											</div>
+										</div>
+										
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Áo kiểu trễ vai tay lửng
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-sale">280.000đ</span>
+								</div>
+							</div>
+							<div class="card-product__properties">
+								<a href="#" class="properties-item active">
+									<span style="background-color:#b97c05;"></span>
+								</a>
+								<a href="#" class="properties-item">
+									<span style="background-color:black;"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Váy xếp ly
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-sale">730.000đ</span>
+								</div>
+							</div>
+							<div class="card-product__properties">
+								<a href="#" class="properties-item active">
+									<span style="background-color:#b97c05;"></span>
+								</a>
+								<a href="#" class="properties-item">
+									<span style="background-color:black;"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/4.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+							<div class="card-product__label">
+								-10%
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Áo trễ vai sọc - Tay lửng
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-default text-decoration-line-through ">930.000đ</span>
+									<span class="price-sale">870.000đ</span>
+								</div>
+							</div>
+							<div class="card-product__properties">
+								<a href="#" class="properties-item active">
+									<span style="background-color:#b97c05;"></span>
+								</a>
+								<a href="#" class="properties-item ">
+									<span style="background-color:#e5e1e1;"></span>
+								</a>
+								<a href="#" class="properties-item">
+									<span style="background-color:black;"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/5.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+							<div class="card-product__label">
+								-12%
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Áo kiểu cổ tym
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-default text-decoration-line-through ">340.000đ</span>
+									<span class="price-sale">280.000đ</span>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/7.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+							<div class="card-product__label">
+								-12%
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Váy jean dài
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-default text-decoration-line-through ">940.000đ</span>
+									<span class="price-sale">860.000đ</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/1.jpg" alt="">
+											</div>
+										</div>
+										
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Áo trễ vai sọc
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-sale">820.000đ</span>
+								</div>
+							</div>
+							<div class="card-product__properties">
+								<a href="#" class="properties-item active">
+									<span style="background-color:#b97c05;"></span>
+								</a>
+								<a href="#" class="properties-item">
+									<span style="background-color:black;"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card-product card h-100 bg-white ">
+						<div class="card-product__header position-relative ">
+							<div class="card-product__image" id="swiper-image">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/5.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/1.jpg" alt="">
+											</div>
+										</div>
+										
+										<div class="swiper-slide">
+											<div class="ratio ratio-1x1">
+												<img src="/asset/image/3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__actions">
+								<div class="card-action" data-hint="Thêm yêu thích">
+									<button type="button" class="btn-favourite btn-onlyIcon" data-id="">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="card-action" data-hint="Xem chi tiết">
+									<button class="d-flex align-items-center justify-content-center w-100 h-100"
+									        data-bs-toggle="modal" data-bs-target="#viewProduct">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+											      stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</button>
+								</div>
+							
+							</div>
+						</div>
+						<div class="card-body card-product__body d-flex flex-column gap-3">
+							<div class="card-body__inner">
+								<a href="#" class="card-product__title">
+									Áo kiểu trễ vai tay lửng
+								</a>
+								<div class="card-product__price d-flex align-items-center gap-2 justify-content-center ">
+									<span class="price-sale">280.000đ</span>
+								</div>
+							</div>
+							<div class="card-product__properties">
+								<a href="#" class="properties-item active">
+									<span style="background-color:#b97c05;"></span>
+								</a>
+								<a href="#" class="properties-item">
+									<span style="background-color:black;"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer class="section-gap">
+	<div class="container">
+		<div class="row row-cols-xl-4 g-5">
+			<div class="col-xl-3 col-md-6">
+				<div class="footer-column">
+					<a href="#" class="footer-logo">
+						<img src="./asset/image/logo-clothes.png" width="180" alt="Logo">
+					</a>
+					<div class="footer-contact">
+						<a href="#" aria-label="" target="_blank">
+							Tầng 1, toà nhà B17 - Chung cư CADIF, Hưng Phú, Cái Răng, Cần Thơ
+						</a>
+						<a href="#" aria-label="" target="_blank">
+							info@demo.com
+						</a>
+						<a href="#" aria-label="">
+							0999 999 990
+						</a>
+					</div>
+					
+					<div class="footer-social">
+						<a href="#" class="footer-social__link" aria-label="" target="_blank">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="#" class="footer-social__link" aria-label="" target="_blank">
+							<i class="fab fa-facebook-messenger"></i>
+						</a>
+						<a href="#" class="footer-social__link" aria-label="" target="_blank">
+							<i class="fab fa-youtube"></i>
+						</a>
+						<a href="#" class="footer-social__link" aria-label="" target="_blank">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-6">
+				<div class="footer-column">
+					<div class="footer-title">
+						CHÍNH SÁCH
+					</div>
+					<ul class="list-unstyled mb-0 footer-list">
+						<li>
+							<a href="#" class="footer-link" aria-label="">
+								Bảo hành & Đổi trả
+							</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link" aria-label="">
+								Chính sách thanh toán
+							</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link" aria-label="">
+								Chính sách kiểm hàng
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-6">
+				<div class="footer-column">
+					<div class="footer-title">
+						DANH MỤC SẢN PHẨM
+					</div>
+					<ul class="list-unstyled mb-0 footer-list">
+						<li>
+							<a href="#" class="footer-link" aria-label="">
+								Áo kiểu
+							</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link" aria-label="">
+								Áo sơ mi
+							</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link" aria-label="">
+								Áo thun
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xl-3 col-md-6">
+				<div class="footer-column">
+					<div class="footer-title">
+						ĐĂNG KÝ NHẬN BẢN TIN
+					</div>
+					<div class="footer-list">
+						<div class="footer-text">Gửi email để nhận thông tin khuyến mãi của chúng tôi</div>
+						<div class="footer-flex">
+							<form action="" id="frm-subribe">
+								<div class="footer-form">
+									<input type="email" placeholder="Nhập email..." class="input-control input-form">
+									<button type="submit" class="button-custom">
+										ĐĂNG KÝ
+									</button>
+								</div>
+							</form>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+		<div class="row row-cols-lg-2 row-cols-1 g-3 align-items-center justify-content-xl-between justify-content-center">
+			<div class="col text-center text-lg-start">
+				Copyright © 2024. All Rights Reserved.
+			</div>
+			<div class="col">
+				<div class="copyright-flex d-flex justify-content-xl-end justify-content-center gap-2">
+					<a href="#" target="_blank" class="d-block">
+						<img src="./asset/image/bongcongthuong.webp" width="120" class="img-fluid" alt="">
+					</a>
+					<a href="#" target="_blank" class="d-block">
+						<img src="./asset/image/thanh-toan.jpg" width="180" class="img-fluid" alt="">
+					</a>
+				</div>
+				
+			</div>
+		</div>
+		</div>
+	</div>
+</footer>
+
+<div class="bg-overplay"></div>
+<!--đăng nhập / đăng ký tài khoản-->
+<div class="section-login">
+	<div class="close-section" id="close-login">
+		<span></span>
+		<span></span>
+	</div>
+	<div class="section-login__wrap position-relative d-flex align-items-center flex-wrap">
+		<div class="login-form w-100">
+			<div class="section-heading-2">
+				<div class="heading-title-2">
+					ĐĂNG NHẬP
+				</div>
+			</div>
+			<form class="frm-login needs-validation" novalidate>
+				<div class="form-group mb-3">
+					<input type="text" class="form-control form-input" placeholder="(*) Email của bạn...." required>
+					<div class="invalid-feedback">
+						Vui lòng nhập Email của bạn!
+					</div>
+				</div>
+				<div class="form-group mb-3">
+					<input type="text" class="form-control form-input" placeholder="(*) Mật khẩu của bạn...." required>
+					<div class="invalid-feedback">
+						Vui lòng nhập Mật khẩu của bạn!
+					</div>
+				</div>
+				<div class="d-flex align-items-center gap-2 flex-lg-row flex-column ">
+					<button type="submit" class="button-login button-custom">
+						ĐĂNG NHẬP
+					</button>
+					<button type="submit" id="show-register" class="button-login button-custom button-custom-outline">
+						TẠO TÀI KHOẢN
+					</button>
+				</div>
+			
+			</form>
+		</div>
+		<div class="register-form w-100">
+			<div class="section-heading-2">
+				<div class="heading-title-2">
+					ĐĂNG KÝ TÀI KHOẢN
+				</div>
+			</div>
+			<form class="frm-register needs-validation" novalidate>
+				<div class="form-group mb-3">
+					<input type="text" class="form-control form-input" placeholder="(*) Email của bạn...." required>
+					<div class="invalid-feedback">
+						Vui lòng nhập Email của bạn!
+					</div>
+				</div>
+				<div class="form-group mb-3">
+					<input type="text" class="form-control form-input" placeholder="(*) Mật khẩu của bạn...." required>
+					<div class="invalid-feedback">
+						Vui lòng nhập Mật khẩu của bạn!
+					</div>
+				</div>
+				<div class="d-flex align-items-center gap-2 flex-lg-row flex-column ">
+					<button type="submit" class="button-login button-custom">
+						ĐĂNG KÝ
+					</button>
+					<button type="submit" id="show-login" class="button-login button-custom button-custom-outline">
+						ĐĂNG NHẬP
+					</button>
+				</div>
+			
+			</form>
+		</div>
+	</div>
+</div>
+
+<!--giỏ hàng-->
+<div class="floating-cart" id="floating-cart">
+	<div class="floating-cart__header section-heading-2">
+		<div class="heading-title-2">
+			GIỎ HÀNG
+		</div>
+		<div class="floating-cart__close close-section" id="close-cart">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<div class="floating-cart__body">
+		<div class="floating-cart__main">
+			<div class="cart-main_scroll">
+				<div class="floating-cart__list">
+					<div class="cart-item">
+						<a class="cart-item__image" href="#">
+							<img src="./asset/image/1.jpg" alt="Áo Yếm + quần đùi xòe">
+						</a>
+						<div class="cart-item__info">
+							<a class="cart-item__title" href="#">
+								Áo Yếm + quần đùi xòe
+							</a>
+							<div class="cart-item__price">
+								<div class="current">330.000đ</div>
+							</div>
+							<div class="cart-item__size">Size:S</div>
+							<div class="cart-item__color">
+								Màu: <span style="background-color: #ae3753;"></span>
+							</div>
+							<div class="cart-item__quantity d-flex align-items-center">
+								<input type="text" value="1" maxlength="100" class="input-quantity" name="">
+								<div class="button-inner">
+									<button class="button-quantity">
+										<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+											<path d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"></path>
+										</svg>
+									</button>
+									<button class="button-quantity">
+										<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+											<path d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"></path>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="cart-item__actions ">
+								<a href="#" class="cart-actions__item">
+									<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+										      stroke-linecap="round" stroke-linejoin="round"></path>
+										<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+										      stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</a>
+								<button type="button" class="btn-favourite cart-actions__item" data-id="20">
+									<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+										      stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</button>
+								<button type="button" class="delete-cart cart-actions__item" data-key="0"
+								        data-id="20">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+										<polyline points="3 6 5 6 21 6"></polyline>
+										<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+										<line x1="10" y1="11" x2="10" y2="17"></line>
+										<line x1="14" y1="11" x2="14" y2="17"></line>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="cart-item">
+						<a class="cart-item__image" href="#">
+							<img src="./asset/image/1.jpg" alt="Áo Yếm + quần đùi xòe">
+						</a>
+						<div class="cart-item__info">
+							<a class="cart-item__title" href="#">
+								Áo Yếm + quần đùi xòe
+							</a>
+							<div class="cart-item__price">
+								<div class="price-current">330.000</div>
+								<div class="price-sale text-decoration-line-through">320.000</div>
+							</div>
+							<div class="cart-item__size">Size:S</div>
+							<div class="cart-item__color">
+								Màu:<span style="background-color: #ae3753;"></span>
+							</div>
+							
+							<div class="cart-item__quantity d-flex align-items-center">
+								<input type="text" value="1" maxlength="100" class="input-quantity" name="">
+								<div class="button-inner">
+									<button class="button-quantity">
+										<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+											<path d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"></path>
+										</svg>
+									</button>
+									<button class="button-quantity">
+										<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+											<path d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"></path>
+										</svg>
+									</button>
+								</div>
+							</div>
+							
+							<div class="cart-item__actions ">
+								<a href="#" class="cart-actions__item">
+									<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.833344 10C0.833344 10 4.16668 3.33337 10 3.33337C15.8333 3.33337 19.1667 10 19.1667 10C19.1667 10 15.8333 16.6667 10 16.6667C4.16668 16.6667 0.833344 10 0.833344 10Z"
+										      stroke-linecap="round" stroke-linejoin="round"></path>
+										<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+										      stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</a>
+								<button type="button" class="btn-favourite cart-actions__item" data-id="20">
+									<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
+										      stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</button>
+								<button type="button" class="delete-cart cart-actions__item" data-key="0"
+								        data-id="20">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+										<polyline points="3 6 5 6 21 6"></polyline>
+										<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+										<line x1="10" y1="11" x2="10" y2="17"></line>
+										<line x1="14" y1="11" x2="14" y2="17"></line>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="floating-cart__empty" style="display: none;">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+						<path d="M263.4 103.4C269.7 97.18 279.8 97.18 286.1 103.4L320 137.4L353.9 103.4C360.2 97.18 370.3 97.18 376.6 103.4C382.8 109.7 382.8 119.8 376.6 126.1L342.6 160L376.6 193.9C382.8 200.2 382.8 210.3 376.6 216.6C370.3 222.8 360.2 222.8 353.9 216.6L320 182.6L286.1 216.6C279.8 222.8 269.7 222.8 263.4 216.6C257.2 210.3 257.2 200.2 263.4 193.9L297.4 160L263.4 126.1C257.2 119.8 257.2 109.7 263.4 103.4zM80 0C87.47 0 93.95 5.17 95.6 12.45L100 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H158.2L172.8 352H496C504.8 352 512 359.2 512 368C512 376.8 504.8 384 496 384H160C152.5 384 146.1 378.8 144.4 371.5L67.23 32H16C7.164 32 0 24.84 0 16C0 7.164 7.164 0 16 0H80zM107.3 64L150.1 256H487.8L541.8 64H107.3zM128 456C128 425.1 153.1 400 184 400C214.9 400 240 425.1 240 456C240 486.9 214.9 512 184 512C153.1 512 128 486.9 128 456zM184 480C197.3 480 208 469.3 208 456C208 442.7 197.3 432 184 432C170.7 432 160 442.7 160 456C160 469.3 170.7 480 184 480zM512 456C512 486.9 486.9 512 456 512C425.1 512 400 486.9 400 456C400 425.1 425.1 400 456 400C486.9 400 512 425.1 512 456zM456 432C442.7 432 432 442.7 432 456C432 469.3 442.7 480 456 480C469.3 480 480 469.3 480 456C480 442.7 469.3 432 456 432z"></path>
+					</svg>
+					<div class="floating-cart__title">
+						Giỏ hàng của bạn đang trống.
+					</div>
+					<div class="floating-cart__button">
+						<a href="javascript:void(0)" class="floating-cart__home">Quay về
+							wesbite</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="floating-cart__bottom">
+			<div class="floating-cart__total">
+				<h5 class="floating-cart__text">
+					Tạm tính:
+				</h5>
+				<h5 class="floating-cart__value">660.000đ</h5>
+			</div>
+			<div class="floating-cart__desc">
+				Phí vận chuyển sẽ được tính khi giao hàng
+			</div>
+			<div class="floating-cart__buttons d-flex flex-md-row flex-column gap-2">
+				<a href="giohang.html" class="button-custom button-custom-outline">
+					Xem giỏ hàng
+				</a>
+				<a href="dathang.html" class="button-custom">
+					Đặt mua ngay
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--modal chi tiết sản phẩm-->
+<div class="modal fade modal-product" id="viewProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="row">
+				<div class="col-lg-5">
+					<div class="modal-product__left p-3 pt-lg-3 pt-5">
+						<div class="swiper-image mb-2" id="image-avatar">
+							<div class="swiper mySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="swiper-image__item">
+											<img src="/asset/image/1.jpg" alt="">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-image__item">
+											<img src="/asset/image/2.jpg" alt="">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-image__item">
+											<img src="/asset/image/3.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-image swiper-image__thumb" id="image-thumb">
+							<div class="swiper mySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="image-thumb">
+											<img src="/asset/image/1.jpg" alt="">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="image-thumb">
+											<img src="/asset/image/2.jpg" alt="">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="image-thumb">
+											<img src="/asset/image/3.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="modal-product__close close-section" data-bs-dismiss="modal">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="modal-product__right pt-4 p-3">
+						<div class="modal-product__header">
+							<h3 class="modal-product__title">
+								Áo khoác len cổ cao đơn giản - Tay dài
+							</h3>
+							<div class="modal-product__code">
+								Mã sản phẩm: SP001
+							</div>
+							<span class="modal-product__label">
+								Ưu đãi-12%
+							</span>
+							<div class="modal-product__price">
+								<span class="price-default text-decoration-line-through ">340.000đ</span> -
+								<span class="price-sale">280.000đ</span>
+							</div>
+							<div class="modal-product__flex mb-4">
+								Màu sắc:
+								<div class="modal-product__properties mt-2">
+									<a href="#" class="properties-item active">
+										<span style="background-color:#b97c05;"></span>
+									</a>
+									<a href="#" class="properties-item ">
+										<span style="background-color:#e5e1e1;"></span>
+									</a>
+									<a href="#" class="properties-item">
+										<span style="background-color:black;"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="modal-product__body d-flex flex-column">
+							<div class="modal-product__desc">
+								Things You Need To Know There are many variations of passages of Lorem Ipsum available,
+								but the majority have suffered
+							</div>
+							<div class="d-flex align-items-center gap-2 flex-wrap">
+								<div class="modal-product__button d-flex align-items-center gap-3 flex-wrap">
+									<div class="modal-product__quantity d-flex align-items-center">
+										<input type="text" value="1" maxlength="100" class="input-quantity" name=""/>
+										<div class="button-inner">
+											<button class="button-quantity">
+												<svg xmlns="http://www.w3.org/2000/svg" height="1em"
+												     viewBox="0 0 320 512">
+													<path d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"/>
+												</svg>
+											</button>
+											<button class="button-quantity">
+												<svg xmlns="http://www.w3.org/2000/svg" height="1em"
+												     viewBox="0 0 320 512">
+													<path d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="modal-product__cart d-inline-flex">
+									MUA NGAY
+								</button>
+								<button type="button" class="modal-product__cart button-card-outline d-flex">
+									THÊM VÀO GIỎ HÀNG
+								</button>
+							</div>
+							<div class="modal-product__social d-flex align-items-center gap-2">
+								Chia sẻ:
+								<a href="#" class="social-item">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+								<a href="#" class="social-item">
+									<i class="fab fa-instagram"></i>
+								</a>
+								<a href="#" class="social-item zalo">
+									<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1.29348in"
+									     height="0.458531in" fill-rule="evenodd" clip-rule="evenodd"
+									     viewBox="0 0 233.68 82.84">
+											 <g id="Layer_x0020_1">
+												 <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+												 <path fill="currentColor"
+												       d="M145.99 77.44l0.08 -76.5 13.85 0c0,13.5 0,26.97 0,40.46 0,8.52 1.09,34.32 -0.35,40.87 1.34,-0.63 0.6,0.63 1.07,-1.69 0.03,-0.11 0,-2.16 0,-2.43 -0.19,-15.05 0.79,-73.03 -0.41,-77.48 -3.01,-0.79 -11.83,-1.04 -14.45,0.19 -0.57,3.61 -0.19,32.05 -0.19,38.14 0,6.09 -1.12,35.44 0.44,38.44l-0.03 -0zm-48.01 -44.56c-8.72,2.51 -16.34,10.82 -13.41,22.35 2.18,8.74 11.47,16.67 23.14,13.55 23.52,-6.31 13.72,-42.65 -9.7,-35.9l-0.03 0zm100.82 -0.79c-9.56,1.39 -17.51,10 -15.98,21.26 3.25,24.18 41.12,19.56 37.16,-5.85 -1.45,-9.18 -10.25,-17.02 -21.17,-15.41zm-52.84 45.35c0.63,6.72 7.38,4.48 13.55,4.84 1.45,-6.56 0.35,-32.35 0.35,-40.87 0,-13.5 0,-26.97 0,-40.46l-13.85 0 -0.08 76.5 0.03 0zm-144.12 -62.54l45 0 -42.76 53.28c-4.26,5.05 -4.34,7.1 -3.91,14.02l60.25 0.03c8.36,-0.08 7.05,-5.98 7.05,-13.09l-47.27 -0.19c1.04,-2.43 9.73,-12.51 12.02,-15.38l31.26 -39.21c3.74,-4.84 3.85,-7.46 3.85,-13.58l-65.49 0 0 14.15 0 -0.03zm193.9 3.91c-15.98,3.06 -29.97,17.92 -25.98,37.87 3.11,15.57 18.09,29.04 37.46,25.55 15.79,-2.87 29.26,-18.14 25.96,-37.18 -2.73,-15.68 -18.03,-29.94 -37.43,-26.23zm-74.54 58.25c3.17,5.9 1.67,5.11 13.33,5.11l0.22 -61.56 -13.25 0 0 3.72c-1.61,-0.3 -4.95,-2.46 -7.08,-3.31 -21.01,-8.2 -43.52,6.86 -43.8,29.37 -0.16,13.36 7.92,23.55 15.9,28.03 13.39,7.54 23.47,4.32 34.67,-1.39l0 0.03z"></path>
+											 </g>
+									</svg>
+								</a>
+							</div>
+							<div class="modal-product__content">
+								<div class="title"> Mô tả sản phẩm</div>
+								<div class="content">
+									There are many variations of passages of Lorem Ipsum available, but the majority
+									have suffered alteration in some form, by injected humour, or randomised words which
+									don't look even slightly believable. If you are going to use a passage of Lorem
+									Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+									text.
+									There are many variations of passages of Lorem Ipsum available, but the majority
+									have suffered alteration in some form, by injected humour, or randomised words which
+									don't look even slightly believable. If you are going to use a passage of Lorem
+									Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+									text.
+								</div>
+							
+							
+							</div>
+						
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="asset/lib/jquery/jquery.min.js"></script>
+<script src="asset/lib/bootstrap5/bootstrap.bundle.min.js"></script>
+<script src="asset/lib/swiper/swiper-bundle.min.js"></script>
+<script src="asset/js/theme.js"></script>
+</body>
+</html>
