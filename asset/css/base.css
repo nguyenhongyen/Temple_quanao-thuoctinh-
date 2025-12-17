@@ -1,8 +1,8 @@
-:root{
-    --primary-color:#cea384;
+:root {
+    --primary-color: #cea384;
     --primary-hover: #c9997a;
-    --secondary-color:#ffca12;
-     --base-color:#e12c43;
+    --secondary-color: #ffca12;
+    --base-color: #e12c43;
 
     --transition-all: all 0.35s ease-in-out;
     --font-family: 'Mulish', sans-serif;
@@ -41,7 +41,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height:1.5;
+    line-height: 1.5;
 }
 
 button {
@@ -74,22 +74,25 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s !important;
 }
-input:focus{
+
+input:focus {
     outline: none;
     box-shadow: none !important;
-    border-color:var(--bs-gray-700) !important;
+    border-color: var(--bs-gray-700) !important;
 }
 
 img, svg {
     vertical-align: middle;
 }
-.section-gap{
+
+.section-gap {
     padding: 40px 0;
 }
-main{
+
+main {
     padding-top: 85px;
 }
 
-.transition{
+.transition {
     transition: all 0.3s ease-in;
 }
